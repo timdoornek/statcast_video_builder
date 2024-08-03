@@ -1,7 +1,7 @@
 
 ## Statcast video downloader
 
-The purpose of this is to programmatically download videos of events (currently only home runs) from a player's statcast ID, and then grab corresponding event "metadata", e.g. date, exit velocity, launch angle, xwOBA, etc. to then use in video editing software.
+The purpose of this is to programmatically download videos of events from a player's statcast ID, and then grab corresponding event "metadata", e.g. date, exit velocity, launch angle, xwOBA, etc. to then use in video editing software.
 
 ### Configuration
  Go to config.py and
