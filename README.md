@@ -22,5 +22,3 @@ Once configured, run main.
 ### #TODOs 
 - ability to download multiple seasons at once
 - take desired "metadata" columns as input
-- learn what the fuck I'm doing when creating/releasing a python library
-- who knows
