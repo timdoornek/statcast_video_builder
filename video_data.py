@@ -13,7 +13,9 @@ def build_data_for_videos(player_id, season, events):
     player_pitch_data = player_pitch_data[player_pitch_data['events'].isin([e.value for e in events])]
 
     #reverse order to match order of videos
-    player_pitch_data.iloc[::-1]
+    player_pitch_data = player_pitch_data.iloc[::-1]
+    #set absolute value of delta_home_win_exp to get WPA
+    player_pitch_data['delta_win_exp'] = player_pitch_data['delta_home_win_exp'].abs()
     #add index col to match hit # on year
     player_pitch_data['hit_index'] = range(0, len(player_pitch_data))
     #add column to match video name
@@ -21,7 +23,7 @@ def build_data_for_videos(player_id, season, events):
 
     #trim to columns we care about
     player_pitch_data = player_pitch_data[['hit_index', 'video_name', 'game_date', 'events', 'hit_distance_sc', 
-                                                         'launch_speed', 'launch_angle', 'delta_home_win_exp',
+                                                         'launch_speed', 'launch_angle', 'delta_win_exp',
                                                          'bat_speed']]
 
     #output to csv

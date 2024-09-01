@@ -17,7 +17,7 @@ def download_videos_from_player_and_team(player_id, team_abbr, events):
     count = 0
     for direct_video_url in direct_video_urls:
         #download video
-        video_name = str(count) + '_' + player_id + constant.MP4_EXT
+        video_name = str(count).zfill(4) + '_' + player_id + constant.MP4_EXT
 
         download_video_from_savant_url(direct_video_url, player_id + constant.TEMP_FOLDER_PATH, video_name)
         count += 1
